@@ -11,7 +11,7 @@ import sys
 
 engine = pyttsx3.init('sapi5')
 
-client = wolframalpha.Client('Y3VL32-YEJ3HGEX7V')
+client = wolframalpha.Client('Your wolfalpha code')
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices)-1].id)
@@ -82,7 +82,7 @@ if __name__ == '__main__':
             else: speak('Your name is: '+name)
         elif 'open google' in query:
             speak('okay')
-            webbrowser.open('www.google.co.in')
+            webbrowser.open('www.google.com.vn')
 
         elif 'open gmail' in query:
             speak('okay')
@@ -104,8 +104,8 @@ if __name__ == '__main__':
                     server = smtplib.SMTP('smtp.gmail.com', 587)
                     server.ehlo()
                     server.starttls()
-                    server.login("huycuongdn1999@gmail.com", '29041999.,')
-                    server.sendmail('huycuongdn1999@gmail.com', "huycuongdn1999@gmail.com", content)
+                    server.login("your email", 'your password')
+                    server.sendmail('username', "username", content)
                     server.close()
                     speak('Email sent!')
 
